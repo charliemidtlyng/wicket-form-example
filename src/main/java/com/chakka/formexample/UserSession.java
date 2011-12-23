@@ -1,13 +1,9 @@
-package no.bekk.bankidsignering;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
-import no.bekk.bankidsignering.modell.Dokument;
+package com.chakka.formexample;
 
 import org.apache.wicket.Request;
 import org.apache.wicket.protocol.http.WebSession;
+
+import com.chakka.formexample.model.Personalia;
 
 /**
  * Sesjonen som lagrer all info om dokumentene og om bruker har signert (klikket på dokumenter)
@@ -15,13 +11,11 @@ import org.apache.wicket.protocol.http.WebSession;
  *
  */
 public class UserSession extends WebSession {
-	public List<Dokument> multidokumenter;
-	public List<Dokument> enkeltdokumenter;
-	
+
+	public Personalia personalia;
 	public UserSession(Request request) {
 		super(request);
-		multidokumenter = new ArrayList<Dokument>();
-		enkeltdokumenter = new ArrayList<Dokument>();
+		personalia = new Personalia();
 	}
 	
 	public static UserSession get () {

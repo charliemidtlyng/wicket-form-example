@@ -1,7 +1,4 @@
-package no.bekk.bankidsignering;
-
-import no.bekk.bankidsignering.sider.SigneringSideEnkel;
-import no.bekk.bankidsignering.sider.SigneringSideMulti;
+package com.chakka.formexample;
 
 import org.apache.wicket.Page;
 import org.apache.wicket.Request;
@@ -10,6 +7,8 @@ import org.apache.wicket.Session;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.springframework.stereotype.Component;
+
+import com.chakka.formexample.pages.PersonaliaRegistrering;
 
 /**
  * Klasse som starter applikasjonen
@@ -21,7 +20,7 @@ public class Applikasjon extends WebApplication {
 
 	@Override
 	public Class<? extends Page> getHomePage() {
-		return SigneringSideMulti.class;
+		return PersonaliaRegistrering.class;
 	}
 
 	@Override
@@ -30,8 +29,7 @@ public class Applikasjon extends WebApplication {
         addComponentInstantiationListener(newSpringComponentInjector());
 
 
-        mountBookmarkablePage("/multisignatur", SigneringSideMulti.class);
-        mountBookmarkablePage("/enkelsignatur", SigneringSideEnkel.class);
+        mountBookmarkablePage("/personalia", PersonaliaRegistrering.class);
 
         getPageSettings().setVersionPagesByDefault(false);
         getSessionSettings().setMaxPageMaps(50);

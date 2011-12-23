@@ -13,7 +13,6 @@
 	<context:component-scan base-package="no" />
 	
 	
-	<bean id="bankIDSignering" class="no.bekk.bankidsignering.service.BankIDSigneringImpl" />
 
 </beans>
 
