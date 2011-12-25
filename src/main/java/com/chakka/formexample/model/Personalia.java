@@ -1,6 +1,8 @@
 package com.chakka.formexample.model;
 
-public class Personalia {
+import java.io.Serializable;
+
+public class Personalia implements Serializable{
 
 	public String fornavn;
 	public String etternavn;

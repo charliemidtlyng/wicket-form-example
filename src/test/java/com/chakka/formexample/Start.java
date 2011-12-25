@@ -1,4 +1,4 @@
-package no.bekk.bankidsignering;
+package com.chakka.formexample;
 
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
